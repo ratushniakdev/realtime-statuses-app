@@ -1,0 +1,23 @@
+{
+  "name": "fullstack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "npm run start:dev --prefix server",
+    "client": "npm run start --prefix client",
+    "client:install": "npm install --prefix client",
+    "server:install": "npm install --prefix server",
+    "all:install": "concurrently \"npm run client:install\" \"npm run server:install\"",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.0.0"
+  },
+  "dependencies": {
+    "server": "^1.0.37"
+  }
+}
